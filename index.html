@@ -1,0 +1,300 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Анализ городского пространства (Санкт-Петербург)</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    .box {
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+    }
+
+    .ast {
+      text-decoration: none;
+      color: #08a89b;
+      border-bottom: 1px solid;
+      border-bottom-color: rgba(15, 122, 252, 0.2);
+    }
+
+    .boxs {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .list {
+      list-style: none;
+      text-decoration: none;
+
+    }
+
+    .boxdata {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 10px;
+      background-color: #323d4d;
+    }
+
+    .fcontentdatar {
+      border: 4px solid #06bcb6;
+      height: 435px;
+      overflow: hidden;
+      margin-left: 30px;
+    }
+
+    .fcontentdatal {
+      height: 565px;
+      overflow: hidden;
+    }
+
+    .fcontentdatalsecond {
+
+      height: 600px;
+      overflow: hidden;
+
+    }
+
+    .fcontentdatarsecond {
+      padding-top: 20px;
+      height: 590px;
+      overflow: hidden;
+      border: 4px solid #06bcb6;
+
+    }
+
+    .fcontent {
+      height: 740px;
+      overflow: hidden;
+      padding: 10px 10px;
+    }
+
+    .four {
+
+      padding: 1em auto 2em;
+      text-align: left;
+    }
+
+    .four h1 {
+      font-family: 'Arial', serif;
+      position: relative;
+
+      font-size: 50px;
+      font-weight: normal;
+      padding: 8px 20px 7px 20px;
+      border-top: 4px solid;
+      border-left: 4px solid;
+      display: inline-block;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .four h1:before {
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      top: -28px;
+      left: -28px;
+      /*border: 4px solid #C44737;*/
+      box-sizing: border-box;
+    }
+
+    .four h3 {
+      font-family: 'Arial', serif;
+      position: relative;
+      color: #06bcb6;
+      font-size: 30px;
+      font-weight: normal;
+      padding: 8px 20px 7px 25px;
+      text-align: left;
+
+      display: inline-block;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .tabs {
+      position: relative;
+      /* Относительное позиционирование */
+    }
+
+    .tab,
+    .tab-title {
+      display: inline-block;
+      /* Выстраиваем по горизонтали */
+    }
+
+    .tab input[type="radio"] {
+      display: none;
+    }
+
+    .tab-title {
+      background: #ccc;
+      /* Цвет фона */
+      padding: 5px 10px;
+      /* Поля вокруг текста */
+      border: 1px solid #666;
+      /* Параметры рамки */
+      border-bottom: none;
+      /* Снизу линию убираем */
+    }
+
+    .tab-content {
+      position: absolute;
+      /* Абсолютное позиционирование */
+      border: 1px solid #666;
+      /* Параметры рамки */
+      padding: 10px;
+      /* Поля вокруг текста */
+      left: 0;
+      /* Размещаем у левого края */
+      width: calc(100% - 20px);
+      /* Ширина содержимого */
+      display: none;
+      /* Прячем вкладку */
+    }
+
+    .tab :checked+.tab-title {
+      position: relative;
+      /* Относительное позиционирование */
+      background: #fff;
+      /* Цвет фона */
+      top: 1px;
+      /* Сдвигаем вниз */
+      z-index: 1;
+      /* Отображаем поверх содержимого */
+    }
+
+    .tab :checked~.tab-content {
+      display: block;
+      /* Показываем активную вкладку */
+    }
+  </style>
+</head>
+
+
+
+<body>
+  <div class="tabs">
+    <div class="tab">
+      <input type="radio" id="tab1" name="tab-group" checked>
+      <label for="tab1" class="tab-title">Визуализации</label>
+      <section class="tab-content">
+
+        <div class="four">
+          <h1>Анализ городского пространства: </h1>
+          <h3>выявление районов Санкт-Петербурга, нуждающихся в активном внедрении цифровых сервисов в сфере здравоохранения (в том числе дистанционного взаимодействия "клиника-пациент")
+          </h3>
+         <h4>актуальность данных: 08/2023 (объекты здравоохранения), 08/2023 (данные из соцсетей)</h4>
+        </div>
+
+        <div class="box">
+          <div class="fcontent">
+            <iframe title="Концентрация городских медицинских учреждений" aria-label="Map" id="datawrapper-chart-nhdGg"
+              src="https://datawrapper.dwcdn.net/nhdGg/10/" scrolling="no" frameborder="0" style="border: none;"
+              width="700" height="794"></iframe>
+          </div>
+          <div class="fcontent">
+            <iframe title="Дифференциация городского пространства по признаку эмоций в соцсетях" aria-label="Map" id="datawrapper-chart-zaJXW" src="https://datawrapper.dwcdn.net/zaJXW/1/" scrolling="no" frameborder="0" style="border: none;" width="700" height="808" data-external="1"></iframe>
+          </div>
+          
+           
+        </div>
+        <div style="align-items: center; padding: 10px;">
+          <div class="fcontent">
+            <iframe title="Дифференциация городского пространства по признаку концентрации поликлиник в районах"
+              aria-label="Map" id="datawrapper-chart-3q6U3" src="https://datawrapper.dwcdn.net/3q6U3/13/" scrolling="no"
+              frameborder="0" style="border: none;" width="700" height="817"></iframe>
+          </div>
+        </div>
+
+      </section>
+    </div>
+    <div class="tab">
+      <input type="radio" id="tab2" name="tab-group">
+      <label for="tab2" class="tab-title">Данные и описание</label>
+      <section class="tab-content">
+        <div class="four">
+          <h1>Анализ городского пространства </h1>
+          <h3>выявление районов Санкт-Петербурга, нуждающихся в активном внедрении цифровых сервисов в сфере здравоохранения (в том числе дистанционного взаимодействия "клиника-пациент")
+          </h3>
+        </div>
+        <div>
+          <div class="boxdata">
+            <br><br><br>
+            <div class="fcontentdatal">
+              <iframe title="" aria-label="Table" id="datawrapper-chart-BlH4p"
+                src="https://datawrapper.dwcdn.net/BlH4p/2/" scrolling="no" frameborder="0" style="border: none;"
+                width="500" height="612"></iframe>
+            </div>
+            <div class="fcontentdatar">
+              <iframe title="" aria-label="Range Plot" id="datawrapper-chart-QXCHq"
+                src="https://datawrapper.dwcdn.net/QXCHq/1/" scrolling="no" frameborder="0" style="border: none;"
+                width="800" height="455"></iframe>
+            </div>
+
+          </div>
+          <br><br><br>
+          <div class="boxdata">
+            <div class="fcontentdatalsecond">
+              <iframe title="" aria-label="Table" id="datawrapper-chart-s23DD"
+                src="https://datawrapper.dwcdn.net/s23DD/2/" scrolling="no" frameborder="0" style="border: none;"
+                width="800" height="700"></iframe>
+            </div>
+            <div class="fcontentdatarsecond">
+              <iframe title="" aria-label="Stacked Column Chart" id="datawrapper-chart-XcuxE"
+                src="https://datawrapper.dwcdn.net/XcuxE/1/" scrolling="no" frameborder="0" style="border: none;"
+                width="600" height="604"></iframe>
+            </div>
+
+          </div>
+          </br>
+      </section>
+    </div>
+    <div class="tab">
+      <input type="radio" id="tab3" name="tab-group">
+      <label for="tab3" class="tab-title">Авторы</label>
+      <section class="tab-content">
+        <div class="four">
+          <h1>Анализ городского пространства </h1>
+          <h3>выявление районов Санкт-Петербурга, нуждающихся в активном внедрении цифровых сервисов в сфере здравоохранения (в том числе дистанционного взаимодействия "клиника-пациент")
+          </h3>
+        </div>
+        <div class="boxs">
+          <p>Проект осуществляется в <a class="ast" href="http://egov.itmo.ru">Центре технологий
+              электронного
+              правительства</a> (НИУ ИТМО)
+			 
+          </p>
+		  <p>
+		     Исследование выполнено при поддержке Российского научного фонда и Санкт-Петербургского научного фонда, грант № 23-28-10069 «Прогнозирование социального самочувствия с целью оптимизации функционирования экосистемы городских цифровых сервисов Санкт-Петербурга» (https://rscf.ru/project/23-28-10069/).
+		  </p>
+          <br>
+          <br>
+          <p>Авторы:
+          <ul class="list">
+            <li>Руководитель проекта - <a class="ast" href="https://github.com/Frantsuzova">Анна Чижик</a>
+              (Санкт-Петербургский
+              государственный университет)</li>
+
+          </ul>
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
