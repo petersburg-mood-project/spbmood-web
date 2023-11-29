@@ -1,6 +1,6 @@
 # spbmood-web
 
-<img src="./readme_src/map.JPG" width="100%" alt="шапка">
+<img src="./readme_src/map.jpg" width="100%" alt="шапка">
 
 здесь будут появляться пилотные версии сервиса
 
