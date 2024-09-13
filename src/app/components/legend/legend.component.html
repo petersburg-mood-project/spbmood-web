@@ -1,0 +1,12 @@
+<div class="legend-container">
+  <div class="legend" [ngStyle]="gradientStyle">
+    @for (tick of ticks; track tick) {
+      <div class="tick" [ngStyle]="{'left': tick.position}">
+        <div class="circle"></div>
+        @if (tick.label) {
+          <span class="label" [ngStyle]="labelStyle">{{ tick.label }}</span>
+        }
+      </div>
+    }
+  </div>
+</div>

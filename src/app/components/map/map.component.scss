@@ -1,0 +1,14 @@
+.map {
+	position: relative;
+	height: 100vh;
+}
+.map-image {
+	max-width: 1200px;
+}
+.map-image svg g path {
+	cursor: pointer;
+	transition: opacity 0.3s;
+}
+.map-image svg g path:hover {
+	opacity: 0.1;
+}

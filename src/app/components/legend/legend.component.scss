@@ -1,0 +1,43 @@
+.legend-container {
+	position: relative;
+	width: 100%;
+	padding-top: 20px;
+}
+
+.legend {
+	height: 20px;
+	border-radius: 10px;
+	background: linear-gradient(
+		to right,
+		#69d2e7,
+		#a7dbd8,
+		#e0e4cc,
+		#f38630,
+		#fa6900
+	);
+	position: relative;
+}
+
+.tick {
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.tick .circle {
+	width: 10px;
+	height: 10px;
+	background-color: white;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+
+.tick .label {
+	position: absolute;
+	top: 25px;
+	transform: translateX(-50%);
+	font-size: 14px;
+	font-weight: bolder;
+	color: #8e8e8e;
+}

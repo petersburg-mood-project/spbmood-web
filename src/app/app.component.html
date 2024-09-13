@@ -1,0 +1,7 @@
+<app-header class="header"></app-header>
+<main class="main">
+	<div [@routeAnimations]="getRouteAnimationData()">
+		<router-outlet #outlet="outlet"></router-outlet>
+	</div>	
+</main>
+<app-footer class="footer"></app-footer>

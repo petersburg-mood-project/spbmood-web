@@ -1,0 +1,67 @@
+<div class="wrapper">
+  <div
+    #container
+    class="container"
+    >
+    <section class="main">
+      <div class="header">
+        <app-title
+          class="title"
+          [title]="content.title"
+        ></app-title>
+        <app-subtitle
+          class="subtitle"
+          [subtitle]="content.subtitle"
+        ></app-subtitle>
+      </div>
+      @if (renderMap) {
+        <app-map [@mapAnimations]
+          class="map"
+          [image]="content.image"
+        ></app-map>
+      } @else {
+        <app-map
+          class="map"
+          [image]="emptyMapImage"
+        ></app-map>
+      }
+      <div class="toggles">
+        <div class="toggles-description">
+          <app-title
+            class="title"
+            [title]="togglesTitle"
+          ></app-title>
+          <app-subtitle
+            class="subtitle"
+            [subtitle]="togglesSubtitle"
+            #mapContainer
+          ></app-subtitle>
+        </div>
+        @for (toggle of toggles; track toggle) {
+          <div
+            class="toggle-wrapper"
+            >
+            <label class="switch">
+              <input
+                type="checkbox"
+                [checked]="toggle.checked"
+                [disabled]="toggle.name === 'Общая карта' && toggle.checked"
+                (change)="onToggleClick($event, toggle.index)"
+                />
+              <span class="slider round"></span>
+            </label>
+            <span class="toggle-label">{{ toggle.name }}</span>
+          </div>
+        }
+      </div>
+      <div class="legend-wrapper">
+        <app-legend
+          [gradient]="'#a50026, #feeda1,#006837'"
+          [labels]="['😨', '😡', '😞', '😀', '😌']"
+          [labelStyle]="{'font-size': '26px'}"
+          >
+        </app-legend>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+.header {
+	position: fixed;
+  top: 0;
+	z-index: 120;
+  width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 30px;
+	background-color: #f3f4f5;
+}
+
+.logo {
+	display: flex;
+}
+
+.image__dept img {
+	position: relative;
+	top: 2px;
+	right: 6px;
+	height: 60px;
+}
+
+.image__uni img {
+	position: relative;
+	right: 28px;
+	height: 60px;
+}
+
+.navigation ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+}
+
+.navigation li {
+	margin: 0 20px;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: #333;
+	font-size: 16px;
+}
+
+.social-icons a {
+	margin-left: 8px;
+}
+
+.social-icons img {
+	height: 36px;
+}
+
+.active {
+	font-weight: bold;
+	scale: 1.04;
+}

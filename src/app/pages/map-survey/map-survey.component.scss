@@ -1,0 +1,66 @@
+.container {
+  transition: opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.main {
+	display: grid;
+	grid-template-columns: 600px 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+		'header map'
+		'legend map ';
+	height: 100vh;
+	overflow: hidden;
+  padding: 60px;
+}
+
+.header {
+	grid-area: header;
+	align-self: center;
+}
+
+.map {
+	grid-area: map;
+}
+
+.legend {
+	grid-area: legend;
+	user-select: none;
+}
+
+.navigation {
+	position: fixed;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__element {
+		width: 12px;
+		height: 12px;
+		background-color: #7b7b7b;
+		margin: 5px;
+		border-radius: 50%;
+		transition: background-color 0.3s;
+		border: 2px solid #fff;
+
+		&.active {
+			background-color: #5dcdd7;
+		}
+	}
+}
+
+.my-legend-wrapper {
+	min-width: 400px;
+  width: 100%;
+  position: relative;
+}

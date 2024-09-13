@@ -1,0 +1,31 @@
+<div class="wrapper">
+  @for (content of contents; track content; let i = $index) {
+    <div
+      #container
+      class="container"
+      [class.active]="i === currentContentIndex"
+      >
+      <section class="main">
+        <div class="header">
+          <app-title class="title" [title]="content.title"></app-title>
+          <app-subtitle
+            class="subtitle"
+            [subtitle]="content.subtitle"
+          ></app-subtitle>
+        </div>
+        <app-map class="map" [image]="content.image"></app-map>
+        <div class="my-legend-wrapper">
+          <app-legend [gradient]="content.gradient"></app-legend>
+        </div>
+      </section>
+      <div class="navigation">
+        @for (content of contents; track content; let i = $index) {
+          <span
+            class="navigation__element"
+            [class.active]="i === currentContentIndex"
+          ></span>
+        }
+      </div>
+    </div>
+  }
+</div>

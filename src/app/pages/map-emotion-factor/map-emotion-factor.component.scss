@@ -1,0 +1,113 @@
+.main {
+	display: grid;
+	grid-template-columns: 600px 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas:
+		'header map'
+		'toggles map'
+		'legend map';
+	height: calc(100vh - 20px);
+	overflow: hidden;
+  padding: 60px;
+  justify-content: center; /* Центрирование по горизонтали */
+	align-content: center;   /* Центрирование по вертикали */
+}
+
+.header {
+	grid-area: header;
+	align-self: center;
+}
+
+.map {
+	grid-area: map;
+}
+
+.legend {
+	grid-area: legend;
+	user-select: none;
+}
+
+.legend-wrapper {
+	min-width: 400px;
+  width: 100%;
+  position: relative;
+	padding: 0;
+}
+
+.toggles {
+	grid-area: toggles;
+	align-self: start;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr, 1fr);
+  grid-template-rows: auto repeat(5, auto);
+  grid-gap: 6px;
+  padding-bottom: 20px;
+
+  .toggles-description {
+		margin: 0;
+		padding: 0;
+    grid-column: span 2;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+}
+
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  
+  .toggle-label {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 24px;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 34px;
+
+      &.round {
+        border-radius: 34px;
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+    }
+
+    input:checked + .slider {
+      background-color: #5dcdd7;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(12px);
+    }
+  }
+}

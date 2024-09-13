@@ -1,0 +1,63 @@
+<header class="header">
+	<div class="logo">
+		<a
+			href="https://news.egov.itmo.ru/"
+			target="_blank"
+			class="image__dept"
+		>
+			<img
+				src="../../../assets/images/logo_dept.png"
+				alt="Logo"
+			/>
+		</a>
+		<a
+			href="https://news.egov.itmo.ru/"
+			target="_blank"
+			class="image__uni"
+		>
+			<img
+				src="../../../assets/images/logo_uni.png"
+				alt="Logo"
+			/>
+		</a>
+	</div>
+	<nav class="navigation">
+		<ul>
+			<li [class.active]="isActiveMenu('home-or-about')">
+				<a routerLink="/about">О проекте</a>
+			</li>
+			<li
+				routerLinkActive="active"
+				[routerLinkActiveOptions]="{ exact: true }"
+			>
+				<a routerLink="/survey">Результаты опроса</a>
+			</li>
+			<li
+				routerLinkActive="active"
+				[routerLinkActiveOptions]="{ exact: true }"
+			>
+				<a routerLink="/emotion-factor">Результаты анализа данных</a>
+			</li>
+			<li
+				routerLinkActive="active"
+				[routerLinkActiveOptions]="{ exact: true }"
+			>
+				<a routerLink="/publications">Публикации</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="social-icons">
+		<a
+			href="https://github.com/petersburg-mood-project/spbmood-web"
+			target="_blank"
+			><img
+				src="../../../assets/images/github.svg"
+				alt="GitHub"
+		/></a>
+		<a href="mailto:chizhik@itmo.ru"
+			><img
+				src="../../../assets/images/mail.svg"
+				alt="Email"
+		/></a>
+	</div>
+</header>

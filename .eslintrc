@@ -1,0 +1,11 @@
+{
+	"rules": {
+		"no-unused-vars": "error",
+		"no-unused-imports": "error"
+	},
+	"parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended"
+  ]
+}

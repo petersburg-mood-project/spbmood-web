@@ -1,0 +1,20 @@
+@if (isVisible) {
+  <div
+    class="tooltip"
+    [ngStyle]="{ top: position.top, left: position.left }"
+    >
+    <a
+      class="close-button"
+      (click)="closeTooltip()"
+      (keyUp)="closeTooltip()"
+      >×</a
+      >
+      <p class="item">{{ districtName }}</p>
+      <p>
+        Население:<span class="item"> {{ population | number }} чел.</span>
+      </p>
+      <p>
+        Площадь:<span class="item"> {{ area | number }} км.кв</span>
+      </p>
+    </div>
+  }

@@ -1,0 +1,11 @@
+<div class="map" #mapContainer>
+	<div class="map-image" [innerHTML]="safeSvg"></div>
+	<app-tooltip #tooltip
+		[isVisible]="tooltipVisible"
+		[districtName]="tooltipInfo?.districtName"
+		[population]="tooltipInfo?.population"
+		[area]="tooltipInfo?.area"
+		[position]="tooltipPosition!"
+		(closed)="closeTooltip()"
+	></app-tooltip>
+</div>
