@@ -1,27 +1,37 @@
-# UrbanPulse
+# spbmood-web
+пилотные версии сервиса
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+---
+## основная идея сервиса
+Нами была разработана модель базовых эмоций<br> 
+(5 родительских классов эмоций и спектры дополнительных эмоций /подклассы/):
+<img src="./readme_src/emotion-model.jpg" width="50%" alt="модель эмоций">
 
-## Development server
+Далее мы проанализировали 412 сообществ в социальной сети ВКонтакте (анализ тональности).<br> 
+Так получилась карта эмоций жителей Санкт-Петербурга, 
+<br>результаты исследования социальной сети ВКонтакте:
+<img src="./readme_src/map.jpg" width="70%" alt="карта с эмоциями">
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Также мы провели тематическое моделирование с апроксимацией до социальных ролей и сфер.<br>
+Так получилась матрица корреляций: район-тема-эмоция:
+<img src="./readme_src/correlation.JPG" width="50%" alt="распределение эмоций по темам в районах">
 
-## Code scaffolding
+Далее мы будем постепенно разрабатывать сервис, который сможет отразить эти данные, а также данные опроса и количественные данные о районах на одной карте.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ниже будут появляться пилотные версии сервиса, проясняющие некоторые аспекты взаимодействия данных, а также дающие нам возможность работать над формализацией ТЗ.
 
-## Build
+---
+:white_check_mark: **прототип 1**: 
+выявление районов Санкт-Петербурга, нуждающихся в активном внедрении цифровых сервисов в сфере здравоохранения (в том числе дистанционного взаимодействия "клиника-пациент"): [прототип](https://petersburg-mood-project.github.io/spbmood-web/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
+<br>
+<br>
+<br>
+<br>
+<br>
 
-## Running end-to-end tests
+###### авторские права на изображения: изображения, представленные в этом репозитории, являются результатами исследований. таким образом, правообладатели изображений - коллектив авторов проекта.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
