@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build the project
-        run: npm run ng build --prod --base-href "https://petersburg-mood-project.github.io/spbmood-web/"
+        run: ng build --prod --base-href "/spbmood-web/"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
