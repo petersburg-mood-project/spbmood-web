@@ -20,7 +20,7 @@
 						"outputPath": {
 							"base": "dist/spbmood-web",
 							"browser": "",
-              "media": "assets"
+							"media": "assets"
 						},
 						"index": "src/index.html",
 						"browser": "src/main.ts",
@@ -35,7 +35,8 @@
 						"production": {
 							"outputPath": {
 								"base": "dist/spbmood-web",
-								"browser": ""
+								"browser": "",
+								"media": "assets"
 							},
 							"budgets": [
 								{
