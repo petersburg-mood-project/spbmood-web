@@ -5,6 +5,7 @@ import { MapSurveyComponent } from './pages/map-survey/map-survey.component';
 import { PublicationsComponent } from './pages/publications/publications.component';
 
 export const routes: Routes = [
+	{ path: '', pathMatch: 'full', redirectTo: '/about' },
 	{
 		path: 'about',
 		component: AboutComponent,
