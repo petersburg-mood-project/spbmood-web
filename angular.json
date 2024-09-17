@@ -33,7 +33,7 @@
 					"configurations": {
 						"production": {
 							"outputPath": {
-								"base": "dist/spbmood-web",
+								"base": "dist",
 								"browser": ""
 							},
 							"budgets": [
