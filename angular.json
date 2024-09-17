@@ -18,7 +18,7 @@
 					"builder": "@angular-devkit/build-angular:application",
 					"options": {
 						"outputPath": {
-							"base": "dist",
+							"base": "dist/spbmood-web",
 							"browser": ""
 						},
 						"index": "src/index.html",
@@ -33,7 +33,7 @@
 					"configurations": {
 						"production": {
 							"outputPath": {
-								"base": "dist",
+								"base": "dist/spbmood-web",
 								"browser": ""
 							},
 							"budgets": [
