@@ -19,7 +19,8 @@
 					"options": {
 						"outputPath": {
 							"base": "dist/spbmood-web",
-							"browser": ""
+							"browser": "",
+              "media": "assets"
 						},
 						"index": "src/index.html",
 						"browser": "src/main.ts",
