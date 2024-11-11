@@ -13,6 +13,6 @@ export class HeaderComponent {
 
 	isActiveMenu(menu: string): boolean {
 		const url = this.router.url;
-		return menu === 'home-or-about' && (url === '/about' || url === '/');
+		return menu === 'home' && (url === '/emotion-factor' || url === '/');
 	}
 }

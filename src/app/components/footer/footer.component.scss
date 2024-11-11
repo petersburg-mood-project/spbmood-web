@@ -26,7 +26,27 @@
 	height: 40px;
 }
 
+.copyright {
+	font-size: 18px;
+	justify-self: end;
+}
+
 .text {
 	max-width: 700px;
 	color: #fff;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	margin-left: 8px;
+	gap: 10px;
+}
+
+.github-icon {
+	height: 36px;
+}
+
+.mail-icon {
+	height: 40px;
 }

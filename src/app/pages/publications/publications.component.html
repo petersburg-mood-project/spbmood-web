@@ -1,22 +1,24 @@
 <section class="publications">
-  <h2 class="title">Список научных публикаций по проекту</h2>
-  <ol class="publications-list">
-    @for (publication of publications; track publication) {
-      <li class="item">
-        <span
-          >{{ publication.author }} <strong>{{ publication.title }}</strong>
-          {{ publication.conference }}, - (год публикации -
-          {{ publication.year }})
-        </span>
-        @if (publication.link) {
-          <a
-            href="{{ publication.link }}"
-            target="_blank"
-            class="publication-link"
-            >{{ publication.link }}</a
-            >
-          }
-        </li>
-      }
-    </ol>
-  </section>
+	<h2 class="title">Список научных публикаций по проекту</h2>
+	<ol class="publications-list">
+		@for (publication of publications; track publication) {
+		<li class="item">
+			<span>
+				{{ publication.author }} <strong>{{ publication.title }}</strong>
+				{{ publication.journal || publication.conference }},
+				{{ publication.volume ? publication.volume + ', ' : '' }}
+				{{ publication.pages ? publication.pages + ', ' : '' }}
+				(год публикации - {{ publication.year }})
+			</span>
+			@if (publication.doi) {
+			<a
+				href="https://doi.org/{{ publication.doi }}"
+				target="_blank"
+				class="publication-link"
+				>DOI: {{ publication.doi }}</a
+			>
+			}
+		</li>
+		}
+	</ol>
+</section>
