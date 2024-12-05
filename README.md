@@ -37,6 +37,7 @@
 <img src="./readme_src/map.jpg" width="70%" alt="карта с эмоциями">
 
 И матрица корреляций: район-тема-эмоция.<br>
+<br><br><br>
 <img src="./readme_src/correlation.JPG" width="50%" alt="распределение эмоций по темам в районах">
 
 ### Результаты
